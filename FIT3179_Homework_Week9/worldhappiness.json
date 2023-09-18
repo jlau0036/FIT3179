@@ -42,8 +42,7 @@
                         {"field": "properties.NAME", "type": "nominal", "title": "Country"},      
                         {"field": "Ladder score", "type": "quantitative"}    
                     ]  
-                },
-                "config": {"mark": {"invalid": null,
-                                    "fill":  "#797979"}} }
+                }
+     }
             ]
             }
