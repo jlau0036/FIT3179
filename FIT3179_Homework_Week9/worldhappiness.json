@@ -25,8 +25,8 @@
                         "type": "quantitative",      
                         "scale": {        
                             "type": "threshold",        
-                            "domain": [1, 2, 3, 4, 5, 6, 7],        
-                            "range": ["#191970", "#4169E1", "#1E90FF", "#00BFFF", "#40E0D0", "#20B2AA", "#008B8B"]      
+                            "domain": [2, 3, 4, 5, 6, 7],        
+                            "range": ["#4169E1", "#1E90FF", "#00BFFF", "#40E0D0", "#20B2AA", "#008B8B"]      
                         } 
                     },    
                     "tooltip": [      
