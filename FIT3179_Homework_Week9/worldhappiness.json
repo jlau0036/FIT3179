@@ -9,7 +9,7 @@
         "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Homework_Week9/ne_110m.json",    
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}  },
 
-        "layer": [         
+        "layer": [        
             {
             "transform": [
               {
@@ -48,7 +48,7 @@
                         "scale": {        
                             "type": "threshold",        
                             "domain": [2, 3, 4, 5, 6, 7],        
-                            "range": ["#CCE5FF", "#66B2FF", "#3399FF", "#0080FF", "#004C99", "#003366", "001933"]      
+                            "range": ["#CCE5FF", "#66B2FF", "#3399FF", "#0080FF", "#004C99", "#003366", "#001540"]      
                         } 
                     },    
                     "tooltip": [      
@@ -57,5 +57,12 @@
                     ]  
                 }
             }
-            ]
+            ],
+            "config": {
+                "legend": { "titleFontSize": 15,
+                            "gradientThickness": 40,
+                            "gradientLength": 300
+
+                }
+              }
             }
