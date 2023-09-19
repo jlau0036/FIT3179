@@ -1,8 +1,8 @@
 {  
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": "World Happiness 2023",  
-    "width": 800,  
-    "height": 400, 
+    "width": 1000,  
+    "height": 600, 
     "projection": {"type": "equalEarth"}, 
     "data": {    
         "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Homework_Week9/ne_110m.json",    
