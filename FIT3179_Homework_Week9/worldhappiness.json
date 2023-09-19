@@ -1,9 +1,10 @@
 {  
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
-    "title": "World Happiness 2023",  
+    "title": { "text": "World Happiness 2023",
+               "fontSize": 25 },
     "width": 1000,  
     "height": 600, 
-    "projection": {"type": "equalEarth"}, 
+    "projection": {"type": "mercator"}, 
     "data": {    
         "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Homework_Week9/ne_110m.json",    
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}  },
@@ -42,7 +43,8 @@
                 "encoding": {    
                     "color": {   
                         "field": "Ladder score",      
-                        "type": "quantitative",      
+                        "type": "quantitative",  
+                        
                         "scale": {        
                             "type": "threshold",        
                             "domain": [2, 3, 4, 5, 6, 7],        
