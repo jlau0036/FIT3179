@@ -10,19 +10,19 @@
 </head>
 <body>
   
-<div id="worldhappiness"></div>
+<div id="globalinfo"></div>
 
 <script type="text/javascript">
 
-  var spec2 = "worldhappiness.json";
-  vegaEmbed('#worldhappiness', spec2).then(function(result) {
+  var spec = "globalinfo.json";
+  vegaEmbed('#globalinfo', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
 
 
-<p> This visualisation is about the World Happiness where the ladder score is used to measure the happiness level of the country. <br>
-      If the ladder score is higher, the country is more happy. The color in the map represents the ladder score which the darker the color, <br>
-      the more ladder score it is, the more happier they are. </p>
+<p> This visualisation is about the Global Birth Rate where the birth rate is calculated per 1000 population per year. <br>
+      If the birth rate is higher, the color in the map represents the birth rate which the darker the color, <br>
+      the more the birth rate the country has. </p>
 </body>
 </html>
