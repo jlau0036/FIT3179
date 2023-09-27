@@ -1,0 +1,35 @@
+body {
+    background-color: white;
+}
+
+header {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.page {
+    width: 1024px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+    ;
+}
+#c-align {
+    text-align: center;
+}
+
+.vis-container {
+    width: 100%;
+}
+
+.pure-g {
+    margin-bottom: 25px;
+}
+p {
+    line-height: 200%;
+    font-size: 115%;
+}

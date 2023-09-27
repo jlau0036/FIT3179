@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <title>Homework Week 10</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" 
+  integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <link rel="stylesheet" href="homeworkw10.css" media="all">
+</head>
+<body>
+ 
+<header>
+Homework Week 10 
+</header>
+<br>
+
+<div class="page">
+
+<div class="pure-g"> 
+  <div class="pure-u-5-5">
+    <div id="globalinfo" class="vis-container"></div>
+  </div>
+</div>
+
+<div class="pure-g"> 
+  <div class="pure-u-5-5">
+    <p id ="c-align"> This visualisation is about the Global Birth Rate where the birth rate is calculated per 1000 population per year. 
+      If the birth rate is higher, the color in the map represents the birth rate which the darker the color,
+      the more the birth rate the country has. </p>
+  </div>
+</div>
+
+<div class="pure-g"> 
+  <div class="pure-u-5-5">
+<div id="homeworkw10" class="graph2"></div>
+</div>
+</div>
+
+<div class="pure-g"> 
+  <div class="pure-u-5-5">
+    <p id ="c-align">This visualisation displays the relationship between the population, urban population and the land area of different countries in the world. 
+      The land area is represented by thr size of the bubble while the x position represents the urban population and 
+      The y position represents the population of the country. The color used is just to differentiate the countries. 
+      There may be a pattern that the bigger the land area is, the more the population is as well as the urban population.</p>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var spec1 = "globalinfo.json";
+  vegaEmbed('#globalinfo', spec1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec2 = "homeworkw10.json";
+  vegaEmbed('#homeworkw10', spec2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>
