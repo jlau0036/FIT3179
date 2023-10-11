@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <title>Country comparison</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" 
+  integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="asgn.css" media="all">
+</head>
+<body>
+  
+<header>
+  <h2>Country comparison 2023</h2>
+</header>
+
+<div class="author">
+  <p> Author: Lau Jia Xuan</p>
+</div>
+
+  <div class="section1"> 
+    <p> Population </p>
+  </div>
+
+
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+      <div class="description1">
+        <div class="d">
+        <h2 id ="c-align">Global Birth Rate 2023</h2>
+        <p id ="c-align">This is a map chart that displays the birth rates of all countries in the world. <br> As the color of the country in the map goes darker, the higher the birth rate it has. <br> In this map chart, it can be seen that Chad and Niger are having the darkest color which means they have higher birth rate than others. </p>
+      </div>
+       <div class="column">
+        <h2 id="c-align">#1</h2>
+        <h3 id="c-align">Niger</h3>
+      </div>
+      <div class="column">
+        <h2 id="c-align">#2</h2>
+        <h3 id="c-align">Chad</h3>
+      </div>
+      <div class="column">
+        <h2 id="c-align">#3</h2>
+        <h3 id="c-align">Somalia</h3>
+      </div>
+  </div>
+    </div>
+    <div class="pure-u-1-2">
+      <div id="vis1" class="vis-container v1"></div>
+    </div>
+</div>
+
+    <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div id="vis2"  class="vis-container v2"></div>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="description2 d">
+            <h2 id ="c-align">Global Population and Urban Population with Land Area 2023</h2>
+            <p id ="c-align">This is a bubble chart that describes the relationship between population, urban population and land area. <br> As the land area increases, it is obvious that the population and urban population increase. THe population and the urban population of all countries actually increase together. </p>
+              </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="section2"> 
+      <p> Economy </p>
+    </div>
+<br>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="description3"><div class="d">
+          <h2 id ="c-align">Top 5 Countries' GDP 2023</h2>
+          <p id ="c-align">This bar chart tells the top five countries that have highest GDP among all countries in the world. <br> They are United States of America, China, Japan, Germany, and United Kingdom.  </p> </div>
+            <div class="column2">
+              <h3 id="c-align">Did you know that United States of America has the highest GDP in the world?</h3>  
+          </div>
+          </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis3" class="vis-container v3"></div>
+      </div>
+  </div>
+
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis4"  class="vis-container v4"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="description4">
+          <div class="d">
+          <h2 id ="c-align">Global Unemployment Rate 2023 (%)</h2>
+          <p id ="c-align">This is radial chart that displays the percentage portion in a radial shape chart. <br> The unemployment rate is represented by the size of the portion so it is also being annotated that the countries South Africa, United States of America and <br> so on have higher unemployment rate compared to other countries in the world. </p> </div>
+        <div class="column3">
+          <h2 id="c-align">#1</h2>
+        <h3 id="c-align">South Africa</h3>
+        </div>  
+        </div>
+      </div>
+</div>
+<br>
+  <div class="section3"> 
+    <p> Environment </p>
+  </div>
+  
+  <br>
+
+  <div class="page">
+    <div class="description5 d">
+      <h2 id ="c-align">Global Co2 Emissions 2023</h2>
+      <p id ="c-align">The bar chart is showing the ranking of global Co2 Emissions in 2023 where China has the highest Co2 Emissions compared to other countries and United States of America is ranked second to have high Co2 Emissions. </p>
+      </div>
+      <br>
+  <div class="pure-g">
+    <div class="pure-u-1">
+  <div id="vis5"  class="vis-container v5"></div>
+  </div>
+    </div>
+  </div>
+
+
+</div>
+<script type="text/javascript">
+
+  var vis1 = "vis1.json";
+  vegaEmbed('#vis1', vis1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis2 = "vis2.json";
+  vegaEmbed('#vis2', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis3 = "vis3.json";
+  vegaEmbed('#vis3', vis3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis4 = "vis4.json";
+  vegaEmbed('#vis4', vis4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis5 = "vis5.json";
+  vegaEmbed('#vis5', vis5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+</script>
+
+
+</body>
+</html>
