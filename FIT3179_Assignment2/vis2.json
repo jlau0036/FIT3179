@@ -4,7 +4,7 @@
     "height": 800,
     "title": {"text":"Global population and urban population with land area 2023", "fontSize": 20, "font": "Times New Roman"},
     "data": {
-      "url": "world-data-2023.csv"
+      "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Assignment2/world-data-2023.csv"
     },
     "params": [
       {
