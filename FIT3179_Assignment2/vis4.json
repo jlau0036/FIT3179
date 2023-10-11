@@ -20,7 +20,14 @@
         "calculate": "datum.Unemploymentrate * 100",
         "as": "Unemployment Rate"
       }, {"filter": "datum.Unemploymentrate * 100  > Unemployment_Rate"}],
-    "layer": [{
+    "layer": [
+      {"params": [
+      {
+        "name": "highlight",
+        "select": {"type": "point", "on": "mouseover"}
+      },
+      {"name": "select", "select": "point"}
+    ], 
       "mark": {"type": "arc", "innerRadius": 20, "stroke":"white", "strokeOpacity": 0.5}
     },{
       "mark": {"type": "text", "radiusOffset": 40},
@@ -44,6 +51,25 @@
   
         
     } }, 
+    "fillOpacity": {
+      "condition": {"param": "select", "value": 1},
+      "value": 0.3
+    },
+    "strokeWidth": {
+      "condition": [
+        {
+          "param": "select",
+          "empty": false,
+          "value": 1
+        },
+        {
+          "param": "highlight",
+          "empty": false,
+          "value": 1
+        }
+      ],
+      "value": 0.5
+    },    
       "tooltip": [{"field": "Country", "type": "nominal", "title": "Country"}, 
                     {"field": "Unemployment Rate", "title": "Unemployment Rate (%)", "format": ".2f"}]
     },
