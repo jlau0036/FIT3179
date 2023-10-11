@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width":"container",
+    "height": 500,
+    "title": {"text":"Top 5 Countries' GDP 2023", "fontSize": 25, "font": "Times New Roman"},
+    "data": {
+      "url": "world-data-2023.csv"
+    },
+    "transform": [{"filter": "datum.GDP > 2800000000000"}],
+    "mark": "bar",
+    "encoding": {
+        "x": {"field": "Country","axis": { "grid": false, "title": "Country", "labelAngle": 0}},
+        "y": {"field": "GDP", "type": "quantitative","axis": { "grid": false, "title": "GDP"}},
+        "tooltip": [{"field": "Country", "type": "nominal", "title": "Country"},
+                    {"field": "GDP", "type": "quantitative", "title": "GDP"}],
+                    "color": {"value": "#78A2CC" }
+      },
+        "view": {
+            "stroke": "transparent"
+        },
+        "config": {
+          "tooltipFormat": {
+            "numberFormat": "$,d"
+          }, 
+          "numberFormat":  "$,d",
+          "customFormatTypes": true}
+
+}
