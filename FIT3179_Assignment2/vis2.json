@@ -29,7 +29,7 @@
         {"field": "LandArea(Km2)", "type": "quantitative", "title": "Land Area (km2)"},
         {"field": "Population", "type": "quantitative", "title": "Population"},
         {"field": "Urban_population", "type": "quantitative", "title": "Urban population"}    ]
-    },
+    },"config": {"legend": {"orient": "top-left"}},
     "view": {
       "stroke": "transparent"
    }
