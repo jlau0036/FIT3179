@@ -74,16 +74,23 @@ header {
 
 .d {
     line-height: 200%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 115%;
 }
 
-
+.charttitle {
+    font-family: 'Times New Roman', Times, serif;
+}
 #c-align {
     text-align: center;
 }
 
-
+.d2 {
+    line-height: 200%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 115%;
+    color: rgb(47, 46, 70);
+}
 
 .column {
     border-radius: 10%;

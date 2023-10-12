@@ -4,9 +4,9 @@
     "height": 500,
     "title": {"text":"Top 5 Countries' GDP 2023", "fontSize": 25, "font": "Times New Roman"},
     "data": {
-      "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Assignment2/world-data-2023.csv"
+      "url": "world-data-2023.csv"
     },
-     "params": [
+    "params": [
       {
         "name": "highlight",
         "select": {"type": "point", "on": "mouseover"}

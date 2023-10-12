@@ -2,24 +2,15 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 700,
-    "title": {"text":"Global Unemployment Rate 2023 (%)", "fontSize": 25, "font": "Times New Roman", "offset": 30},
+    "title": {"text":"Top 5 Countries' Unemployment Rate 2023 (%)", "fontSize": 25, "font": "Times New Roman", "offset": 30},
     "data": {
-      "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Assignment2/world-data-2023.csv"
+      "url": "world-data-2023.csv"
     },"config": {"numberFormat": "0.2f"},
-    "params": [
-        {
-          "name": "Unemployment_Rate",
-    
-          "value": 0,
-          "bind": {"input": "range", "min": 0, "max": 30, "step": 2, "name": "  Unemployment Rate: "}
-          
-        }
-      ],
     "transform": [{"filter": "datum.Unemploymentrate > 0"},
       {
         "calculate": "datum.Unemploymentrate * 100",
         "as": "Unemployment Rate"
-      }, {"filter": "datum.Unemploymentrate * 100  > Unemployment_Rate"}],
+      }, {"filter": "datum.Unemploymentrate * 100  >= 20"}],
     "layer": [
       {"params": [
       {
@@ -28,14 +19,14 @@
       },
       {"name": "select", "select": "point"}
     ], 
-      "mark": {"type": "arc", "innerRadius": 20, "stroke":"white", "strokeOpacity": 0.5}
+      "mark": {"type": "arc", "innerRadius": 100, "stroke":"white", "strokeOpacity": 0.5}
     },{
       "mark": {"type": "text", "radiusOffset": 40},
       "encoding": {
         "text": {"field": "Country", "type": "nominal"}, 
         "opacity": {
             "condition": { 
-                "test": "datum['Country'] == 'South Africa' || datum['Country'] == 'Turkey' || datum['Country'] == 'Italy' || datum['Country'] == 'Armenia' || datum['Country'] == 'Saudi Arabia' || datum['Country'] == 'Malaysia'",
+                "test": "datum['Country'] == 'South Africa' || datum['Country'] == 'Gabon' || datum['Country'] == 'Lesotho' || datum['Country'] == 'Namibia' || datum['Country'] == 'Saint Lucia'",
                 "value": 1
         }, "value": 0
       }
@@ -44,13 +35,9 @@
     "encoding": {
       "theta": {"field": "Unemployment Rate", "type": "quantitative", "stack": "normalize"},
       "radius": {"field": "Unemployment Rate", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},
-      "color": {"field": "Unemployment Rate", "type": "nominal", "legend": null, "scale": {        
-        "type": "bin-ordinal",        
-        "domain": [0, 4, 8, 12, 16, 20],        
-        "range": ["#DBECF4", "#CADEED", "#B7D0E1", "#91AEC4", "#5F82A2", "#194569"]   
-  
-        
-    } }, 
+      "color": {"field": "Country", "type": "nominal", "legend": null, "scale": {                   
+        "range": ["#A0C3D2", "#AC7D88", "#FD8A8A", "#9EA1D4", "#A8D1D1"]      
+    } },
     "fillOpacity": {
       "condition": {"param": "select", "value": 1},
       "value": 0.3
