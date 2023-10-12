@@ -4,7 +4,7 @@
   "width": 500,
   "height": 500,
   "data": {
-    "url": "world-data-2023.csv"
+    "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Assignment2/world-data-2023.csv"
   },
       "transform": [{"filter": "datum.Co2Emissions > 1000000"}],
       "encoding": {
