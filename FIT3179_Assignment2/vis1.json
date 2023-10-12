@@ -1,7 +1,7 @@
 {  
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": { "text": "Global Birth Rate 2023",
-               "fontSize": 30, "offset": -100, "font": "Times New Roman"},
+               "fontSize": 30, "font": "Times New Roman"},
     "width": "container",  
     "height": 600, 
     "projection": {"type": "equirectangular"}, 
