@@ -100,7 +100,7 @@
                             "orient": "bottom",
                             "titleAlign": "center",
                             "labelAlign": "right",
-                            "offset": -100
+                            "offset": -50
 
                 },
                 "view": {
