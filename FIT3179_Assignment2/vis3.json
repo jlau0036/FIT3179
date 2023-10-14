@@ -5,16 +5,28 @@
     "title": {"text":"Top 5 Countries' GDP 2023", "fontSize": 25, "font": "Times New Roman"},
     "data": {
       "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Assignment2/world-data-2023.csv"
-    },
-    "params": [
-      {
-        "name": "highlight",
-        "select": {"type": "point", "on": "mouseover"}
-      },
-      {"name": "select", "select": "point"}
-    ], 
+    }, 
     "transform": [{"filter": "datum.GDP > 2800000000000"}],
-    "mark": "bar",
+    "layer": [{
+      "params": [
+        {
+          "name": "highlight",
+          "select": {"type": "point", "on": "mouseover"}
+        },
+        {"name": "select", "select": "point"}
+      ],
+      "mark": {"type": "bar", "cornerRadiusEnd": 4}}, 
+        {"mark": {"type":"text", "dy": -18, "dx": 40, "align":"right"}, 
+        "encoding": {
+          "text": {
+            "condition": {
+              "test": "datum.Country == 'United States of America'", 
+              "value": ["US has high consumer spending"," & bussiness investment"]}
+            },
+            
+              "color": {"value": "#02367B"}
+            }
+          }],
     "encoding": {
         "x": {"field": "Country","axis": { "grid": false, "title": "Country", "labelAngle": 0}},
         "y": {"field": "GDP", "type": "quantitative","axis": { "grid": false, "title": "GDP"}},
@@ -40,7 +52,7 @@
                       ],
                       "value": 0.5
                     }
-      },
+      },       
         "view": {
             "stroke": "transparent"
         },

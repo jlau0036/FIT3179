@@ -5,13 +5,26 @@
     "title": {"text":"Global population and urban population with land area 2023", "fontSize": 20, "font": "Times New Roman"},
     "data": {
       "url": "https://raw.githubusercontent.com/jlau0036/FIT3179/main/FIT3179_Assignment2/world-data-2023.csv"
-    },  
+    }, 
+    "layer": [{
     "params": [{
       "name": "grid",
       "select": "interval",
       "bind": "scales"
+    }], "mark": "circle"},{
+      "mark": {"type": "text"},
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"}, 
+        "opacity": {
+            "condition": { 
+                "test": "datum['Country'] == 'South Africa' || datum['Country'] == 'Malaysia' || datum['Country'] == 'Saint Lucia' || datum['Country'] == 'Georgia' || datum['Country'] == 'China' || datum['Country'] == 'United States of America' || datum['Country'] == 'Australia'",
+                "value": 1
+        }, "value": 0
+      }, "size": {"value": 10}, 
+      "color": {"value":"black"}
+    }
     }],
-    "mark": "circle",
+
     "encoding": {
       "x": {
         "field": "Urban_population", "type": "quantitative","scale": {"type": "log", "domain":[10000, 1000000000]}, "axis": { "grid": false, "title": "Urban Population", "values": [0, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000]}
